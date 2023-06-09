@@ -1,0 +1,1788 @@
+[
+ {
+  "type": "var_assign",
+  "var_name": {
+   "type": "identifier",
+   "value": "convert_number_to_roman",
+   "text": "convert_number_to_roman",
+   "offset": 2,
+   "lineBreaks": 0,
+   "line": 2,
+   "col": 1
+  },
+  "value": {
+   "type": "lambda",
+   "parameters": [
+    {
+     "type": "identifier",
+     "value": "number",
+     "text": "number",
+     "offset": 29,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 28
+    }
+   ],
+   "body": [
+    {
+     "type": "fun_call",
+     "fun_name": {
+      "type": "identifier",
+      "value": "convert_number_to_roman_helper",
+      "text": "convert_number_to_roman_helper",
+      "offset": 46,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 5
+     },
+     "arguments": [
+      {
+       "type": "identifier",
+       "value": "number",
+       "text": "number",
+       "offset": 77,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 36
+      },
+      {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 84,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 43
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "type": "var_assign",
+  "var_name": {
+   "type": "identifier",
+   "value": "convert_number_to_roman_helper",
+   "text": "convert_number_to_roman_helper",
+   "offset": 90,
+   "lineBreaks": 0,
+   "line": 5,
+   "col": 1
+  },
+  "value": {
+   "type": "lambda",
+   "parameters": [
+    {
+     "type": "identifier",
+     "value": "number",
+     "text": "number",
+     "offset": 124,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 35
+    },
+    {
+     "type": "identifier",
+     "value": "place",
+     "text": "place",
+     "offset": 131,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 42
+    }
+   ],
+   "body": [
+    {
+     "type": "fun_call",
+     "fun_name": {
+      "type": "identifier",
+      "value": "if",
+      "text": "if",
+      "offset": 148,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 5
+     },
+     "arguments": [
+      {
+       "type": "fun_call",
+       "fun_name": {
+        "type": "identifier",
+        "value": "eq",
+        "text": "eq",
+        "offset": 152,
+        "lineBreaks": 0,
+        "line": 6,
+        "col": 9
+       },
+       "arguments": [
+        {
+         "type": "identifier",
+         "value": "number",
+         "text": "number",
+         "offset": 155,
+         "lineBreaks": 0,
+         "line": 6,
+         "col": 12
+        },
+        {
+         "type": "number",
+         "value": "0",
+         "text": "0",
+         "offset": 162,
+         "lineBreaks": 0,
+         "line": 6,
+         "col": 19
+        }
+       ]
+      },
+      {
+       "type": "lambda",
+       "parameters": [],
+       "body": [
+        {
+         "type": "string",
+         "value": "\"\"",
+         "text": "\"\"",
+         "offset": 180,
+         "lineBreaks": 0,
+         "line": 7,
+         "col": 15
+        }
+       ]
+      },
+      {
+       "type": "lambda",
+       "parameters": [],
+       "body": [
+        {
+         "type": "var_assign",
+         "var_name": {
+          "type": "identifier",
+          "value": "digit",
+          "text": "digit",
+          "offset": 213,
+          "lineBreaks": 0,
+          "line": 9,
+          "col": 13
+         },
+         "value": {
+          "type": "fun_call",
+          "fun_name": {
+           "type": "identifier",
+           "value": "modulus",
+           "text": "modulus",
+           "offset": 221,
+           "lineBreaks": 0,
+           "line": 9,
+           "col": 21
+          },
+          "arguments": [
+           {
+            "type": "identifier",
+            "value": "number",
+            "text": "number",
+            "offset": 229,
+            "lineBreaks": 0,
+            "line": 9,
+            "col": 29
+           },
+           {
+            "type": "number",
+            "value": "10",
+            "text": "10",
+            "offset": 236,
+            "lineBreaks": 0,
+            "line": 9,
+            "col": 36
+           }
+          ]
+         }
+        },
+        {
+         "type": "var_assign",
+         "var_name": {
+          "type": "identifier",
+          "value": "right_part",
+          "text": "right_part",
+          "offset": 253,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 13
+         },
+         "value": {
+          "type": "fun_call",
+          "fun_name": {
+           "type": "identifier",
+           "value": "convert_digit_to_roman",
+           "text": "convert_digit_to_roman",
+           "offset": 266,
+           "lineBreaks": 0,
+           "line": 10,
+           "col": 26
+          },
+          "arguments": [
+           {
+            "type": "identifier",
+            "value": "digit",
+            "text": "digit",
+            "offset": 289,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 49
+           },
+           {
+            "type": "identifier",
+            "value": "place",
+            "text": "place",
+            "offset": 295,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 55
+           }
+          ]
+         }
+        },
+        {
+         "type": "var_assign",
+         "var_name": {
+          "type": "identifier",
+          "value": "remaining",
+          "text": "remaining",
+          "offset": 315,
+          "lineBreaks": 0,
+          "line": 11,
+          "col": 13
+         },
+         "value": {
+          "type": "fun_call",
+          "fun_name": {
+           "type": "identifier",
+           "value": "floor",
+           "text": "floor",
+           "offset": 327,
+           "lineBreaks": 0,
+           "line": 11,
+           "col": 25
+          },
+          "arguments": [
+           {
+            "type": "fun_call",
+            "fun_name": {
+             "type": "identifier",
+             "value": "divide",
+             "text": "divide",
+             "offset": 333,
+             "lineBreaks": 0,
+             "line": 11,
+             "col": 31
+            },
+            "arguments": [
+             {
+              "type": "identifier",
+              "value": "number",
+              "text": "number",
+              "offset": 340,
+              "lineBreaks": 0,
+              "line": 11,
+              "col": 38
+             },
+             {
+              "type": "number",
+              "value": "10",
+              "text": "10",
+              "offset": 347,
+              "lineBreaks": 0,
+              "line": 11,
+              "col": 45
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "type": "var_assign",
+         "var_name": {
+          "type": "identifier",
+          "value": "left_part",
+          "text": "left_part",
+          "offset": 365,
+          "lineBreaks": 0,
+          "line": 12,
+          "col": 13
+         },
+         "value": {
+          "type": "fun_call",
+          "fun_name": {
+           "type": "identifier",
+           "value": "convert_number_to_roman_helper",
+           "text": "convert_number_to_roman_helper",
+           "offset": 377,
+           "lineBreaks": 0,
+           "line": 12,
+           "col": 25
+          },
+          "arguments": [
+           {
+            "type": "identifier",
+            "value": "remaining",
+            "text": "remaining",
+            "offset": 408,
+            "lineBreaks": 0,
+            "line": 12,
+            "col": 56
+           },
+           {
+            "type": "fun_call",
+            "fun_name": {
+             "type": "identifier",
+             "value": "add",
+             "text": "add",
+             "offset": 418,
+             "lineBreaks": 0,
+             "line": 12,
+             "col": 66
+            },
+            "arguments": [
+             {
+              "type": "identifier",
+              "value": "place",
+              "text": "place",
+              "offset": 422,
+              "lineBreaks": 0,
+              "line": 12,
+              "col": 70
+             },
+             {
+              "type": "number",
+              "value": "1",
+              "text": "1",
+              "offset": 428,
+              "lineBreaks": 0,
+              "line": 12,
+              "col": 76
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "type": "fun_call",
+         "fun_name": {
+          "type": "identifier",
+          "value": "concat",
+          "text": "concat",
+          "offset": 445,
+          "lineBreaks": 0,
+          "line": 13,
+          "col": 13
+         },
+         "arguments": [
+          {
+           "type": "identifier",
+           "value": "left_part",
+           "text": "left_part",
+           "offset": 452,
+           "lineBreaks": 0,
+           "line": 13,
+           "col": 20
+          },
+          {
+           "type": "identifier",
+           "value": "right_part",
+           "text": "right_part",
+           "offset": 462,
+           "lineBreaks": 0,
+           "line": 13,
+           "col": 30
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "type": "comment",
+  "value": "// Converts a single digit to roman numeral",
+  "text": "// Converts a single digit to roman numeral",
+  "offset": 498,
+  "lineBreaks": 0,
+  "line": 18,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// digit - is a number between 0 - 9",
+  "text": "// digit - is a number between 0 - 9",
+  "offset": 543,
+  "lineBreaks": 0,
+  "line": 19,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// place - is a number represening what place you are doing",
+  "text": "// place - is a number represening what place you are doing",
+  "offset": 581,
+  "lineBreaks": 0,
+  "line": 20,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "//      the conversion for (1 - ones, 2 - tens, 3 - hundreds, 4 - thousands)",
+  "text": "//      the conversion for (1 - ones, 2 - tens, 3 - hundreds, 4 - thousands)",
+  "offset": 642,
+  "lineBreaks": 0,
+  "line": 21,
+  "col": 1
+ },
+ {
+  "type": "var_assign",
+  "var_name": {
+   "type": "identifier",
+   "value": "convert_digit_to_roman",
+   "text": "convert_digit_to_roman",
+   "offset": 720,
+   "lineBreaks": 0,
+   "line": 22,
+   "col": 1
+  },
+  "value": {
+   "type": "lambda",
+   "parameters": [
+    {
+     "type": "identifier",
+     "value": "digit",
+     "text": "digit",
+     "offset": 746,
+     "lineBreaks": 0,
+     "line": 22,
+     "col": 27
+    },
+    {
+     "type": "identifier",
+     "value": "place",
+     "text": "place",
+     "offset": 752,
+     "lineBreaks": 0,
+     "line": 22,
+     "col": 33
+    }
+   ],
+   "body": [
+    {
+     "type": "fun_call",
+     "fun_name": {
+      "type": "identifier",
+      "value": "if",
+      "text": "if",
+      "offset": 769,
+      "lineBreaks": 0,
+      "line": 23,
+      "col": 5
+     },
+     "arguments": [
+      {
+       "type": "fun_call",
+       "fun_name": {
+        "type": "identifier",
+        "value": "eq",
+        "text": "eq",
+        "offset": 773,
+        "lineBreaks": 0,
+        "line": 23,
+        "col": 9
+       },
+       "arguments": [
+        {
+         "type": "identifier",
+         "value": "digit",
+         "text": "digit",
+         "offset": 776,
+         "lineBreaks": 0,
+         "line": 23,
+         "col": 12
+        },
+        {
+         "type": "number",
+         "value": "0",
+         "text": "0",
+         "offset": 782,
+         "lineBreaks": 0,
+         "line": 23,
+         "col": 18
+        }
+       ]
+      },
+      {
+       "type": "lambda",
+       "parameters": [],
+       "body": [
+        {
+         "type": "string",
+         "value": "\"\"",
+         "text": "\"\"",
+         "offset": 800,
+         "lineBreaks": 0,
+         "line": 24,
+         "col": 15
+        }
+       ]
+      },
+      {
+       "type": "lambda",
+       "parameters": [],
+       "body": [
+        {
+         "type": "fun_call",
+         "fun_name": {
+          "type": "identifier",
+          "value": "if",
+          "text": "if",
+          "offset": 832,
+          "lineBreaks": 0,
+          "line": 26,
+          "col": 13
+         },
+         "arguments": [
+          {
+           "type": "fun_call",
+           "fun_name": {
+            "type": "identifier",
+            "value": "or",
+            "text": "or",
+            "offset": 836,
+            "lineBreaks": 0,
+            "line": 26,
+            "col": 17
+           },
+           "arguments": [
+            {
+             "type": "fun_call",
+             "fun_name": {
+              "type": "identifier",
+              "value": "eq",
+              "text": "eq",
+              "offset": 839,
+              "lineBreaks": 0,
+              "line": 26,
+              "col": 20
+             },
+             "arguments": [
+              {
+               "type": "identifier",
+               "value": "digit",
+               "text": "digit",
+               "offset": 842,
+               "lineBreaks": 0,
+               "line": 26,
+               "col": 23
+              },
+              {
+               "type": "number",
+               "value": "1",
+               "text": "1",
+               "offset": 848,
+               "lineBreaks": 0,
+               "line": 26,
+               "col": 29
+              }
+             ]
+            },
+            {
+             "type": "fun_call",
+             "fun_name": {
+              "type": "identifier",
+              "value": "or",
+              "text": "or",
+              "offset": 851,
+              "lineBreaks": 0,
+              "line": 26,
+              "col": 32
+             },
+             "arguments": [
+              {
+               "type": "fun_call",
+               "fun_name": {
+                "type": "identifier",
+                "value": "eq",
+                "text": "eq",
+                "offset": 854,
+                "lineBreaks": 0,
+                "line": 26,
+                "col": 35
+               },
+               "arguments": [
+                {
+                 "type": "identifier",
+                 "value": "digit",
+                 "text": "digit",
+                 "offset": 857,
+                 "lineBreaks": 0,
+                 "line": 26,
+                 "col": 38
+                },
+                {
+                 "type": "number",
+                 "value": "2",
+                 "text": "2",
+                 "offset": 863,
+                 "lineBreaks": 0,
+                 "line": 26,
+                 "col": 44
+                }
+               ]
+              },
+              {
+               "type": "fun_call",
+               "fun_name": {
+                "type": "identifier",
+                "value": "eq",
+                "text": "eq",
+                "offset": 866,
+                "lineBreaks": 0,
+                "line": 26,
+                "col": 47
+               },
+               "arguments": [
+                {
+                 "type": "identifier",
+                 "value": "digit",
+                 "text": "digit",
+                 "offset": 869,
+                 "lineBreaks": 0,
+                 "line": 26,
+                 "col": 50
+                },
+                {
+                 "type": "number",
+                 "value": "3",
+                 "text": "3",
+                 "offset": 875,
+                 "lineBreaks": 0,
+                 "line": 26,
+                 "col": 56
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "lambda",
+           "parameters": [],
+           "body": [
+            {
+             "type": "fun_call",
+             "fun_name": {
+              "type": "identifier",
+              "value": "repeat",
+              "text": "repeat",
+              "offset": 903,
+              "lineBreaks": 0,
+              "line": 27,
+              "col": 23
+             },
+             "arguments": [
+              {
+               "type": "fun_call",
+               "fun_name": {
+                "type": "identifier",
+                "value": "one",
+                "text": "one",
+                "offset": 910,
+                "lineBreaks": 0,
+                "line": 27,
+                "col": 30
+               },
+               "arguments": [
+                {
+                 "type": "identifier",
+                 "value": "place",
+                 "text": "place",
+                 "offset": 914,
+                 "lineBreaks": 0,
+                 "line": 27,
+                 "col": 34
+                }
+               ]
+              },
+              {
+               "type": "identifier",
+               "value": "digit",
+               "text": "digit",
+               "offset": 921,
+               "lineBreaks": 0,
+               "line": 27,
+               "col": 41
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "lambda",
+           "parameters": [],
+           "body": [
+            {
+             "type": "fun_call",
+             "fun_name": {
+              "type": "identifier",
+              "value": "if",
+              "text": "if",
+              "offset": 972,
+              "lineBreaks": 0,
+              "line": 29,
+              "col": 21
+             },
+             "arguments": [
+              {
+               "type": "fun_call",
+               "fun_name": {
+                "type": "identifier",
+                "value": "eq",
+                "text": "eq",
+                "offset": 976,
+                "lineBreaks": 0,
+                "line": 29,
+                "col": 25
+               },
+               "arguments": [
+                {
+                 "type": "identifier",
+                 "value": "digit",
+                 "text": "digit",
+                 "offset": 979,
+                 "lineBreaks": 0,
+                 "line": 29,
+                 "col": 28
+                },
+                {
+                 "type": "number",
+                 "value": "4",
+                 "text": "4",
+                 "offset": 985,
+                 "lineBreaks": 0,
+                 "line": 29,
+                 "col": 34
+                }
+               ]
+              },
+              {
+               "type": "lambda",
+               "parameters": [],
+               "body": [
+                {
+                 "type": "fun_call",
+                 "fun_name": {
+                  "type": "identifier",
+                  "value": "concat",
+                  "text": "concat",
+                  "offset": 1019,
+                  "lineBreaks": 0,
+                  "line": 30,
+                  "col": 31
+                 },
+                 "arguments": [
+                  {
+                   "type": "fun_call",
+                   "fun_name": {
+                    "type": "identifier",
+                    "value": "one",
+                    "text": "one",
+                    "offset": 1026,
+                    "lineBreaks": 0,
+                    "line": 30,
+                    "col": 38
+                   },
+                   "arguments": [
+                    {
+                     "type": "identifier",
+                     "value": "place",
+                     "text": "place",
+                     "offset": 1030,
+                     "lineBreaks": 0,
+                     "line": 30,
+                     "col": 42
+                    }
+                   ]
+                  },
+                  {
+                   "type": "fun_call",
+                   "fun_name": {
+                    "type": "identifier",
+                    "value": "five",
+                    "text": "five",
+                    "offset": 1037,
+                    "lineBreaks": 0,
+                    "line": 30,
+                    "col": 49
+                   },
+                   "arguments": [
+                    {
+                     "type": "identifier",
+                     "value": "place",
+                     "text": "place",
+                     "offset": 1042,
+                     "lineBreaks": 0,
+                     "line": 30,
+                     "col": 54
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "lambda",
+               "parameters": [],
+               "body": [
+                {
+                 "type": "fun_call",
+                 "fun_name": {
+                  "type": "identifier",
+                  "value": "if",
+                  "text": "if",
+                  "offset": 1110,
+                  "lineBreaks": 0,
+                  "line": 32,
+                  "col": 29
+                 },
+                 "arguments": [
+                  {
+                   "type": "fun_call",
+                   "fun_name": {
+                    "type": "identifier",
+                    "value": "eq",
+                    "text": "eq",
+                    "offset": 1114,
+                    "lineBreaks": 0,
+                    "line": 32,
+                    "col": 33
+                   },
+                   "arguments": [
+                    {
+                     "type": "identifier",
+                     "value": "digit",
+                     "text": "digit",
+                     "offset": 1117,
+                     "lineBreaks": 0,
+                     "line": 32,
+                     "col": 36
+                    },
+                    {
+                     "type": "number",
+                     "value": "5",
+                     "text": "5",
+                     "offset": 1123,
+                     "lineBreaks": 0,
+                     "line": 32,
+                     "col": 42
+                    }
+                   ]
+                  },
+                  {
+                   "type": "lambda",
+                   "parameters": [],
+                   "body": [
+                    {
+                     "type": "fun_call",
+                     "fun_name": {
+                      "type": "identifier",
+                      "value": "five",
+                      "text": "five",
+                      "offset": 1165,
+                      "lineBreaks": 0,
+                      "line": 33,
+                      "col": 39
+                     },
+                     "arguments": [
+                      {
+                       "type": "identifier",
+                       "value": "place",
+                       "text": "place",
+                       "offset": 1170,
+                       "lineBreaks": 0,
+                       "line": 33,
+                       "col": 44
+                      }
+                     ]
+                    }
+                   ]
+                  },
+                  {
+                   "type": "lambda",
+                   "parameters": [],
+                   "body": [
+                    {
+                     "type": "fun_call",
+                     "fun_name": {
+                      "type": "identifier",
+                      "value": "if",
+                      "text": "if",
+                      "offset": 1253,
+                      "lineBreaks": 0,
+                      "line": 35,
+                      "col": 37
+                     },
+                     "arguments": [
+                      {
+                       "type": "fun_call",
+                       "fun_name": {
+                        "type": "identifier",
+                        "value": "or",
+                        "text": "or",
+                        "offset": 1257,
+                        "lineBreaks": 0,
+                        "line": 35,
+                        "col": 41
+                       },
+                       "arguments": [
+                        {
+                         "type": "fun_call",
+                         "fun_name": {
+                          "type": "identifier",
+                          "value": "eq",
+                          "text": "eq",
+                          "offset": 1260,
+                          "lineBreaks": 0,
+                          "line": 35,
+                          "col": 44
+                         },
+                         "arguments": [
+                          {
+                           "type": "identifier",
+                           "value": "digit",
+                           "text": "digit",
+                           "offset": 1263,
+                           "lineBreaks": 0,
+                           "line": 35,
+                           "col": 47
+                          },
+                          {
+                           "type": "number",
+                           "value": "6",
+                           "text": "6",
+                           "offset": 1269,
+                           "lineBreaks": 0,
+                           "line": 35,
+                           "col": 53
+                          }
+                         ]
+                        },
+                        {
+                         "type": "fun_call",
+                         "fun_name": {
+                          "type": "identifier",
+                          "value": "or",
+                          "text": "or",
+                          "offset": 1272,
+                          "lineBreaks": 0,
+                          "line": 35,
+                          "col": 56
+                         },
+                         "arguments": [
+                          {
+                           "type": "fun_call",
+                           "fun_name": {
+                            "type": "identifier",
+                            "value": "eq",
+                            "text": "eq",
+                            "offset": 1275,
+                            "lineBreaks": 0,
+                            "line": 35,
+                            "col": 59
+                           },
+                           "arguments": [
+                            {
+                             "type": "identifier",
+                             "value": "digit",
+                             "text": "digit",
+                             "offset": 1278,
+                             "lineBreaks": 0,
+                             "line": 35,
+                             "col": 62
+                            },
+                            {
+                             "type": "number",
+                             "value": "7",
+                             "text": "7",
+                             "offset": 1284,
+                             "lineBreaks": 0,
+                             "line": 35,
+                             "col": 68
+                            }
+                           ]
+                          },
+                          {
+                           "type": "fun_call",
+                           "fun_name": {
+                            "type": "identifier",
+                            "value": "eq",
+                            "text": "eq",
+                            "offset": 1287,
+                            "lineBreaks": 0,
+                            "line": 35,
+                            "col": 71
+                           },
+                           "arguments": [
+                            {
+                             "type": "identifier",
+                             "value": "digit",
+                             "text": "digit",
+                             "offset": 1290,
+                             "lineBreaks": 0,
+                             "line": 35,
+                             "col": 74
+                            },
+                            {
+                             "type": "number",
+                             "value": "8",
+                             "text": "8",
+                             "offset": 1296,
+                             "lineBreaks": 0,
+                             "line": 35,
+                             "col": 80
+                            }
+                           ]
+                          }
+                         ]
+                        }
+                       ]
+                      },
+                      {
+                       "type": "lambda",
+                       "parameters": [],
+                       "body": [
+                        {
+                         "type": "fun_call",
+                         "fun_name": {
+                          "type": "identifier",
+                          "value": "concat",
+                          "text": "concat",
+                          "offset": 1348,
+                          "lineBreaks": 0,
+                          "line": 36,
+                          "col": 47
+                         },
+                         "arguments": [
+                          {
+                           "type": "fun_call",
+                           "fun_name": {
+                            "type": "identifier",
+                            "value": "five",
+                            "text": "five",
+                            "offset": 1355,
+                            "lineBreaks": 0,
+                            "line": 36,
+                            "col": 54
+                           },
+                           "arguments": [
+                            {
+                             "type": "identifier",
+                             "value": "place",
+                             "text": "place",
+                             "offset": 1360,
+                             "lineBreaks": 0,
+                             "line": 36,
+                             "col": 59
+                            }
+                           ]
+                          },
+                          {
+                           "type": "fun_call",
+                           "fun_name": {
+                            "type": "identifier",
+                            "value": "repeat",
+                            "text": "repeat",
+                            "offset": 1367,
+                            "lineBreaks": 0,
+                            "line": 36,
+                            "col": 66
+                           },
+                           "arguments": [
+                            {
+                             "type": "fun_call",
+                             "fun_name": {
+                              "type": "identifier",
+                              "value": "one",
+                              "text": "one",
+                              "offset": 1374,
+                              "lineBreaks": 0,
+                              "line": 36,
+                              "col": 73
+                             },
+                             "arguments": [
+                              {
+                               "type": "identifier",
+                               "value": "place",
+                               "text": "place",
+                               "offset": 1378,
+                               "lineBreaks": 0,
+                               "line": 36,
+                               "col": 77
+                              }
+                             ]
+                            },
+                            {
+                             "type": "fun_call",
+                             "fun_name": {
+                              "type": "identifier",
+                              "value": "subtract",
+                              "text": "subtract",
+                              "offset": 1385,
+                              "lineBreaks": 0,
+                              "line": 36,
+                              "col": 84
+                             },
+                             "arguments": [
+                              {
+                               "type": "identifier",
+                               "value": "digit",
+                               "text": "digit",
+                               "offset": 1394,
+                               "lineBreaks": 0,
+                               "line": 36,
+                               "col": 93
+                              },
+                              {
+                               "type": "number",
+                               "value": "5",
+                               "text": "5",
+                               "offset": 1400,
+                               "lineBreaks": 0,
+                               "line": 36,
+                               "col": 99
+                              }
+                             ]
+                            }
+                           ]
+                          }
+                         ]
+                        }
+                       ]
+                      },
+                      {
+                       "type": "lambda",
+                       "parameters": [],
+                       "body": [
+                        {
+                         "type": "fun_call",
+                         "fun_name": {
+                          "type": "identifier",
+                          "value": "if",
+                          "text": "if",
+                          "offset": 1497,
+                          "lineBreaks": 0,
+                          "line": 38,
+                          "col": 45
+                         },
+                         "arguments": [
+                          {
+                           "type": "fun_call",
+                           "fun_name": {
+                            "type": "identifier",
+                            "value": "eq",
+                            "text": "eq",
+                            "offset": 1501,
+                            "lineBreaks": 0,
+                            "line": 38,
+                            "col": 49
+                           },
+                           "arguments": [
+                            {
+                             "type": "identifier",
+                             "value": "digit",
+                             "text": "digit",
+                             "offset": 1504,
+                             "lineBreaks": 0,
+                             "line": 38,
+                             "col": 52
+                            },
+                            {
+                             "type": "number",
+                             "value": "9",
+                             "text": "9",
+                             "offset": 1510,
+                             "lineBreaks": 0,
+                             "line": 38,
+                             "col": 58
+                            }
+                           ]
+                          },
+                          {
+                           "type": "lambda",
+                           "parameters": [],
+                           "body": [
+                            {
+                             "type": "fun_call",
+                             "fun_name": {
+                              "type": "identifier",
+                              "value": "concat",
+                              "text": "concat",
+                              "offset": 1568,
+                              "lineBreaks": 0,
+                              "line": 39,
+                              "col": 55
+                             },
+                             "arguments": [
+                              {
+                               "type": "fun_call",
+                               "fun_name": {
+                                "type": "identifier",
+                                "value": "one",
+                                "text": "one",
+                                "offset": 1575,
+                                "lineBreaks": 0,
+                                "line": 39,
+                                "col": 62
+                               },
+                               "arguments": [
+                                {
+                                 "type": "identifier",
+                                 "value": "place",
+                                 "text": "place",
+                                 "offset": 1579,
+                                 "lineBreaks": 0,
+                                 "line": 39,
+                                 "col": 66
+                                }
+                               ]
+                              },
+                              {
+                               "type": "fun_call",
+                               "fun_name": {
+                                "type": "identifier",
+                                "value": "one",
+                                "text": "one",
+                                "offset": 1586,
+                                "lineBreaks": 0,
+                                "line": 39,
+                                "col": 73
+                               },
+                               "arguments": [
+                                {
+                                 "type": "fun_call",
+                                 "fun_name": {
+                                  "type": "identifier",
+                                  "value": "add",
+                                  "text": "add",
+                                  "offset": 1590,
+                                  "lineBreaks": 0,
+                                  "line": 39,
+                                  "col": 77
+                                 },
+                                 "arguments": [
+                                  {
+                                   "type": "identifier",
+                                   "value": "place",
+                                   "text": "place",
+                                   "offset": 1594,
+                                   "lineBreaks": 0,
+                                   "line": 39,
+                                   "col": 81
+                                  },
+                                  {
+                                   "type": "number",
+                                   "value": "1",
+                                   "text": "1",
+                                   "offset": 1600,
+                                   "lineBreaks": 0,
+                                   "line": 39,
+                                   "col": 87
+                                  }
+                                 ]
+                                }
+                               ]
+                              }
+                             ]
+                            }
+                           ]
+                          },
+                          {
+                           "type": "lambda",
+                           "parameters": [],
+                           "body": [
+                            {
+                             "type": "fun_call",
+                             "fun_name": {
+                              "type": "identifier",
+                              "value": "concat",
+                              "text": "concat",
+                              "offset": 1660,
+                              "lineBreaks": 0,
+                              "line": 40,
+                              "col": 55
+                             },
+                             "arguments": [
+                              {
+                               "type": "string",
+                               "value": "\"!\"",
+                               "text": "\"!\"",
+                               "offset": 1667,
+                               "lineBreaks": 0,
+                               "line": 40,
+                               "col": 62
+                              },
+                              {
+                               "type": "string",
+                               "value": "\"!\"",
+                               "text": "\"!\"",
+                               "offset": 1671,
+                               "lineBreaks": 0,
+                               "line": 40,
+                               "col": 66
+                              }
+                             ]
+                            }
+                           ]
+                          }
+                         ]
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "type": "var_assign",
+  "var_name": {
+   "type": "identifier",
+   "value": "one",
+   "text": "one",
+   "offset": 1844,
+   "lineBreaks": 0,
+   "line": 49,
+   "col": 1
+  },
+  "value": {
+   "type": "lambda",
+   "parameters": [
+    {
+     "type": "identifier",
+     "value": "place",
+     "text": "place",
+     "offset": 1851,
+     "lineBreaks": 0,
+     "line": 49,
+     "col": 8
+    }
+   ],
+   "body": [
+    {
+     "type": "fun_call",
+     "fun_name": {
+      "type": "identifier",
+      "value": "at",
+      "text": "at",
+      "offset": 1861,
+      "lineBreaks": 0,
+      "line": 49,
+      "col": 18
+     },
+     "arguments": [
+      {
+       "type": "string",
+       "value": "\"IXCMↂ\"",
+       "text": "\"IXCMↂ\"",
+       "offset": 1864,
+       "lineBreaks": 0,
+       "line": 49,
+       "col": 21
+      },
+      {
+       "type": "fun_call",
+       "fun_name": {
+        "type": "identifier",
+        "value": "subtract",
+        "text": "subtract",
+        "offset": 1872,
+        "lineBreaks": 0,
+        "line": 49,
+        "col": 29
+       },
+       "arguments": [
+        {
+         "type": "identifier",
+         "value": "place",
+         "text": "place",
+         "offset": 1881,
+         "lineBreaks": 0,
+         "line": 49,
+         "col": 38
+        },
+        {
+         "type": "number",
+         "value": "1",
+         "text": "1",
+         "offset": 1887,
+         "lineBreaks": 0,
+         "line": 49,
+         "col": 44
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "type": "var_assign",
+  "var_name": {
+   "type": "identifier",
+   "value": "five",
+   "text": "five",
+   "offset": 1892,
+   "lineBreaks": 0,
+   "line": 50,
+   "col": 1
+  },
+  "value": {
+   "type": "lambda",
+   "parameters": [
+    {
+     "type": "identifier",
+     "value": "place",
+     "text": "place",
+     "offset": 1900,
+     "lineBreaks": 0,
+     "line": 50,
+     "col": 9
+    }
+   ],
+   "body": [
+    {
+     "type": "fun_call",
+     "fun_name": {
+      "type": "identifier",
+      "value": "at",
+      "text": "at",
+      "offset": 1910,
+      "lineBreaks": 0,
+      "line": 50,
+      "col": 19
+     },
+     "arguments": [
+      {
+       "type": "string",
+       "value": "\"VLDↁ\"",
+       "text": "\"VLDↁ\"",
+       "offset": 1913,
+       "lineBreaks": 0,
+       "line": 50,
+       "col": 22
+      },
+      {
+       "type": "fun_call",
+       "fun_name": {
+        "type": "identifier",
+        "value": "subtract",
+        "text": "subtract",
+        "offset": 1920,
+        "lineBreaks": 0,
+        "line": 50,
+        "col": 29
+       },
+       "arguments": [
+        {
+         "type": "identifier",
+         "value": "place",
+         "text": "place",
+         "offset": 1929,
+         "lineBreaks": 0,
+         "line": 50,
+         "col": 38
+        },
+        {
+         "type": "number",
+         "value": "1",
+         "text": "1",
+         "offset": 1935,
+         "lineBreaks": 0,
+         "line": 50,
+         "col": 44
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(1 1))",
+  "text": "// print(convert_digit_to_roman(1 1))",
+  "offset": 1942,
+  "lineBreaks": 0,
+  "line": 52,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(2 1))",
+  "text": "// print(convert_digit_to_roman(2 1))",
+  "offset": 1981,
+  "lineBreaks": 0,
+  "line": 53,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(3 1))",
+  "text": "// print(convert_digit_to_roman(3 1))",
+  "offset": 2020,
+  "lineBreaks": 0,
+  "line": 54,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(4 1))",
+  "text": "// print(convert_digit_to_roman(4 1))",
+  "offset": 2059,
+  "lineBreaks": 0,
+  "line": 55,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(5 1))",
+  "text": "// print(convert_digit_to_roman(5 1))",
+  "offset": 2098,
+  "lineBreaks": 0,
+  "line": 56,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(6 1))",
+  "text": "// print(convert_digit_to_roman(6 1))",
+  "offset": 2137,
+  "lineBreaks": 0,
+  "line": 57,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(7 1))",
+  "text": "// print(convert_digit_to_roman(7 1))",
+  "offset": 2176,
+  "lineBreaks": 0,
+  "line": 58,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(8 1))",
+  "text": "// print(convert_digit_to_roman(8 1))",
+  "offset": 2215,
+  "lineBreaks": 0,
+  "line": 59,
+  "col": 1
+ },
+ {
+  "type": "comment",
+  "value": "// print(convert_digit_to_roman(9 1))",
+  "text": "// print(convert_digit_to_roman(9 1))",
+  "offset": 2254,
+  "lineBreaks": 0,
+  "line": 60,
+  "col": 1
+ },
+ {
+  "type": "fun_call",
+  "fun_name": {
+   "type": "identifier",
+   "value": "each",
+   "text": "each",
+   "offset": 2295,
+   "lineBreaks": 0,
+   "line": 62,
+   "col": 1
+  },
+  "arguments": [
+   {
+    "type": "fun_call",
+    "fun_name": {
+     "type": "identifier",
+     "value": "range",
+     "text": "range",
+     "offset": 2300,
+     "lineBreaks": 0,
+     "line": 62,
+     "col": 6
+    },
+    "arguments": [
+     {
+      "type": "number",
+      "value": "1",
+      "text": "1",
+      "offset": 2306,
+      "lineBreaks": 0,
+      "line": 62,
+      "col": 12
+     },
+     {
+      "type": "number",
+      "value": "10001",
+      "text": "10001",
+      "offset": 2308,
+      "lineBreaks": 0,
+      "line": 62,
+      "col": 14
+     }
+    ]
+   },
+   {
+    "type": "lambda",
+    "parameters": [
+     {
+      "type": "identifier",
+      "value": "number",
+      "text": "number",
+      "offset": 2321,
+      "lineBreaks": 0,
+      "line": 63,
+      "col": 6
+     }
+    ],
+    "body": [
+     {
+      "type": "var_assign",
+      "var_name": {
+       "type": "identifier",
+       "value": "roman",
+       "text": "roman",
+       "offset": 2343,
+       "lineBreaks": 0,
+       "line": 64,
+       "col": 9
+      },
+      "value": {
+       "type": "fun_call",
+       "fun_name": {
+        "type": "identifier",
+        "value": "convert_number_to_roman",
+        "text": "convert_number_to_roman",
+        "offset": 2351,
+        "lineBreaks": 0,
+        "line": 64,
+        "col": 17
+       },
+       "arguments": [
+        {
+         "type": "identifier",
+         "value": "number",
+         "text": "number",
+         "offset": 2375,
+         "lineBreaks": 0,
+         "line": 64,
+         "col": 41
+        }
+       ]
+      }
+     },
+     {
+      "type": "fun_call",
+      "fun_name": {
+       "type": "identifier",
+       "value": "print",
+       "text": "print",
+       "offset": 2392,
+       "lineBreaks": 0,
+       "line": 65,
+       "col": 9
+      },
+      "arguments": [
+       {
+        "type": "fun_call",
+        "fun_name": {
+         "type": "identifier",
+         "value": "concat",
+         "text": "concat",
+         "offset": 2398,
+         "lineBreaks": 0,
+         "line": 65,
+         "col": 15
+        },
+        "arguments": [
+         {
+          "type": "identifier",
+          "value": "number",
+          "text": "number",
+          "offset": 2405,
+          "lineBreaks": 0,
+          "line": 65,
+          "col": 22
+         },
+         {
+          "type": "fun_call",
+          "fun_name": {
+           "type": "identifier",
+           "value": "concat",
+           "text": "concat",
+           "offset": 2412,
+           "lineBreaks": 0,
+           "line": 65,
+           "col": 29
+          },
+          "arguments": [
+           {
+            "type": "string",
+            "value": "\" = \"",
+            "text": "\" = \"",
+            "offset": 2419,
+            "lineBreaks": 0,
+            "line": 65,
+            "col": 36
+           },
+           {
+            "type": "identifier",
+            "value": "roman",
+            "text": "roman",
+            "offset": 2425,
+            "lineBreaks": 0,
+            "line": 65,
+            "col": 42
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]
